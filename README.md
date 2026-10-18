@@ -48,3 +48,7 @@ pitfalls.
   (MIT, see [case/LICENSE-hillstub](case/LICENSE-hillstub)).
 - Firmware for the Solum CC2630-based tags:
   [oepl-cc2630-firmware](https://github.com/ratsark/oepl-cc2630-firmware).
+
+## License
+
+MIT, see [LICENSE](LICENSE). The case keeps hillstub's MIT notice too.
