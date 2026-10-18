@@ -1,0 +1,6 @@
+[
+  {"box":  [0, 0, 296, 30, "red"]},
+  {"text": [148, 4, "Hello!", "fonts/bahnschrift20", "white", 1]},
+  {"text": [10, 45, "Drawn by the AP", "fonts/calibrib16", "black"]},
+  {"circle": [260, 90, 25, "black"]}
+]
