@@ -31,5 +31,5 @@ other help. Verify by walking through it on a freshly flashed AP (setup network
 - [ ] Printable box for AP, tags, stands, power brick and cable, with the QR code
 
 ## Open questions
-- Unverified: whether the full tag UI works while the AP is in setup
-  (no-Wi-Fi) mode; whether a renamed AP is reachable by name on common routers
+- Unverified: whether a renamed AP is reachable by name on common routers
+- Verified 2026-10-18: setup mode only serves the Wi-Fi page; testing needs a real network

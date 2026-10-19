@@ -8,7 +8,9 @@ if they haven't got the AP on their Wi-Fi yet.
 ## The AP's HTTP API
 
 Everything the web page does is plain HTTP on the AP, with **no authentication**.
-Keep it on the home network; never expose it to the internet. `<ap>` below is
+Keep it on the home network; never expose it to the internet. Note that
+`GET /get_wifi_config` returns the saved Wi-Fi password in plain text: don't
+print or log its output. `<ap>` below is
 its IP address, or its DHCP hostname: `OpenEpaperLink-XXXX`, or the AP's alias
 (kits are named `OpenEPaperLink`) if one is set in AP settings. mDNS/`.local` isn't
 supported.

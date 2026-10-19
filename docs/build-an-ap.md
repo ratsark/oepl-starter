@@ -96,9 +96,10 @@ tap `RST`, release `BOOT`, then rerun with `--before no-reset`.
    the S3 isn't hearing the C6: check the 17↔2 and 18↔3 wires are crossed as
    in the table.
 
-You can test an AP **without putting it on any Wi-Fi**: power it up fresh, join
-its `OpenEPaperLink` network, and open http://192.168.4.1/. Check `/sysinfo`
-as above and watch for tags checking in.
+The AP's own setup network (`OpenEPaperLink`, 192.168.4.1) only offers the
+Wi-Fi setup page; the tag list and settings appear once it has joined a
+network. To test an AP you're giving away, put it on your own Wi-Fi first,
+then clear its Wi-Fi before handing it over (see Gotchas).
 
 The AP defaults to radio **channel 11**. A tag only re-scans when it loses its
 AP, so a tag moves to a new AP when its batteries are pulled near that one, or
@@ -115,6 +116,19 @@ when it's carried out of range of its old one.
 - **The AP's own C6 updater** (`POST /update_c6`) failed with "Connection to the
   C6 failed" on one AP; flashing the C6 over USB worked. Watch updates live on
   `ws://<ip>/ws`.
+- **Clear your Wi-Fi before giving an AP away.** The AP's web page has no
+  login, and `/get_wifi_config` returns the saved network name *and password*
+  in plain text to anyone who can reach it. To forget the network but keep the
+  tags and settings, either hold `BOOT` on the S3 for 5 seconds while it powers
+  up, or run
+  `curl -X POST -H 'Content-Type: application/json' -d '{"ssid":"","pw":""}' http://<ap>/save_wifi_config`.
+  It reboots into setup mode. (Never send `"ssid":"factory"`: that wipes
+  everything, tags included.) Without saved Wi-Fi it also falls back to setup
+  mode by itself, 15 seconds after failing to connect.
+- **Several APs on one network share their tag lists**, and tags on the same
+  channel may check in with either. Tags another AP is serving show up as
+  "remote" (`isexternal`). That's by design; a tag settles on whichever AP it
+  can still hear once you move one.
 - **`apstate` isn't in `/sysinfo`** on this build; `ap_version` is the useful
   field.
 
