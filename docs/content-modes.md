@@ -13,7 +13,7 @@ running in your house.
 | **RSS feed** | Latest headlines from any feed URL | News, blogs, GitHub releases |
 | **Google calendar** | Your upcoming events | A desk tag. Needs a small Google Apps Script; the AP's page links instructions |
 | **QR code** | Any text or URL as a QR code | Guest Wi-Fi, a link |
-| **Image URL** | Downloads a picture from a web address every N minutes | Your own content drawn anywhere, see [going further](going-further.md) |
+| **Image URL** | Downloads a picture from a web address every N minutes | The [ready-made weather and Deep Thought pictures](hosted-views.md), or your own content drawn anywhere, see [going further](going-further.md) |
 | **Json template** | Downloads a list of drawing commands from a web address | Your own layouts, see [going further](going-further.md) |
 | **Static image** | A picture you upload once | Art, a photo, a sign |
 | **Display a copy** | Mirrors another tag | Two tags showing the same thing |

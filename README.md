@@ -20,9 +20,12 @@ open, hackable, and meant to be broken and fixed again.
 
 1. **[First steps](docs/first-steps.md)**: plug the AP in, put it on your Wi-Fi,
    and get live weather on a tag in about ten minutes.
-2. **[What the AP can show by itself](docs/content-modes.md)**: weather, calendar,
+2. **[Ready-made pictures](docs/hosted-views.md)**: East Bay weather and a daily
+   Deep Thought, drawn for each tag size and kept up to date for you. Paste a
+   URL and you're done.
+3. **[What the AP can show by itself](docs/content-modes.md)**: weather, calendar,
    RSS, countdowns, QR codes and more, with no other computer involved.
-3. **[Going further](docs/going-further.md)**: draw your own content, from a
+4. **[Going further](docs/going-further.md)**: draw your own content, from a
    cloud script, a Raspberry Pi, or Home Assistant.
 
 ## Make more of them

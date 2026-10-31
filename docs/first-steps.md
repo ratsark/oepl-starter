@@ -64,6 +64,9 @@ it updates by itself.
 
 ## Now what?
 
+- Want it prettier? There are [ready-made pictures](hosted-views.md) of the
+  Berkeley and Oakland weather, and a Deep Thought, sized for each tag. Paste
+  a URL into the tag's **Image URL** mode and it takes care of itself.
 - Try the other [content modes](content-modes.md) on the other tags.
 - Give each tag a name: click its card and fill in **Alias**.
 - Ready to draw your own stuff? See [going further](going-further.md).
