@@ -22,9 +22,9 @@ open, hackable, and meant to be broken and fixed again.
 1. **[First steps](docs/first-steps.md)**: plug the AP in, put it on your
    Wi-Fi, and have live weather on every tag in about ten minutes, then a Deep
    Thought on one of them.
-2. **[Ready-made pictures](docs/hosted-views.md)**: the full list of what's
-   kept up to date for you, East Bay weather in three sizes and a Deep Thought
-   in two.
+2. **[Live displays, ready to use](docs/hosted-views.md)**: weather and Deep
+   Thoughts that update themselves. You paste a link into a tag and it stays
+   current from then on. East Bay weather in three sizes, a Deep Thought in two.
 3. **[What the AP can show by itself](docs/content-modes.md)**: countdowns, QR
    codes, calendars, RSS and more, with no other computer involved.
 4. **[Going further](docs/going-further.md)**: draw your own pictures, from a

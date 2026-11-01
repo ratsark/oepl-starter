@@ -1,9 +1,11 @@
-# Ready-made pictures: weather and Deep Thoughts
+# Live displays, ready to use: weather and Deep Thoughts
 
-The fastest way to get something good-looking on a tag is to point it at a
-picture that someone else keeps up to date. These are hosted at
-`oepl.ratsark.com`, redrawn on a schedule, and drawn separately for each tag
-size in the kit. Your AP downloads them itself; nothing runs in your house.
+A tag can show a picture from any web address, and re-fetch it on a schedule.
+So if someone keeps a picture up to date for you, your tag stays up to date
+too: paste the link once and forget about it. That's what these are. Weather
+and Deep Thoughts, redrawn on a schedule at `oepl.ratsark.com`, drawn
+separately for each tag size in the kit. Your AP downloads them itself;
+nothing runs in your house.
 
 If you've just unboxed the kit, [first steps](first-steps.md) walks you through
 putting these on the tags. This page is the reference.

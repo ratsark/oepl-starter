@@ -47,7 +47,7 @@ See [examples/push_image.py](examples/push_image.py) for a dependency-light
 uploader, and [docs/going-further.md](docs/going-further.md) for pull-based
 options (Image URL, Json template) that need no always-on computer.
 
-**Reach for the ready-made pictures first.** East Bay weather (6", 2.9", 1.6")
+**Reach for the ready-to-use live displays first.** East Bay weather (6", 2.9", 1.6")
 and a Deep Thought (6", 2.9") are kept up to date at `https://oepl.ratsark.com/`;
 the URLs per size are in [docs/hosted-views.md](docs/hosted-views.md). Setting
 a tag to them is `save_cfg` with `contentmode=7` and

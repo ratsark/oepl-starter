@@ -60,7 +60,7 @@ For each tag:
 Within a minute or two each tag flashes a few times (that's e-paper redrawing)
 and settles on the forecast. The pictures are redrawn hourly on a server and
 your AP fetches them; nothing else runs in your house. The full list, including
-how they're made, is in [ready-made pictures](hosted-views.md).
+how they're made, is in [live displays, ready to use](hosted-views.md).
 
 **Not in the East Bay?** The AP can draw its own forecast for any town: set
 **Content** to **Weather forecast**, type the town, pick units. Do this on a

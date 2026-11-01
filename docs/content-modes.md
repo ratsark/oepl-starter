@@ -2,19 +2,19 @@
 
 Every tag has a **Content** setting on the AP's web page. Most modes are drawn
 by the AP itself and refreshed on a schedule. Nothing else needs to be
-running in your house. (The [ready-made pictures](hosted-views.md) are the
+running in your house. (The [ready-to-use live displays](hosted-views.md) are the
 exception that proves the rule: drawn elsewhere, fetched by the AP.)
 
 | Mode | What it shows | Good for |
 |---|---|---|
 | **Current weather** | Temperature and conditions now | A 1.6" tag |
-| **Weather forecast** | Several days ahead | A 2.9" tag only: the layout doesn't fit the 6" or 1.6". For the East Bay, the [ready-made pictures](hosted-views.md) look better at every size |
+| **Weather forecast** | Several days ahead | A 2.9" tag only: the layout doesn't fit the 6" or 1.6". For the East Bay, the [ready-to-use live displays](hosted-views.md) look better at every size |
 | **Current date** | Today's date | Any tag |
 | **Count days / Count hours** | A countdown or count-up, turning red past a threshold you set | "Days until vacation", "days since the cat was fed" |
 | **RSS feed** | Latest headlines from any feed URL | News, blogs, GitHub releases |
 | **Google calendar** | Your upcoming events | A desk tag. Needs a small Google Apps Script; the AP's page links instructions |
 | **QR code** | Any text or URL as a QR code | Guest Wi-Fi, a link |
-| **Image URL** | Downloads a picture from a web address every N minutes | The [ready-made weather and Deep Thought pictures](hosted-views.md), or your own content drawn anywhere, see [going further](going-further.md) |
+| **Image URL** | Downloads a picture from a web address every N minutes | The [ready-to-use weather and Deep Thought displays](hosted-views.md), or your own content drawn anywhere, see [going further](going-further.md) |
 | **Json template** | Downloads a list of drawing commands from a web address | Your own layouts, see [going further](going-further.md) |
 | **Static image** | A picture you upload once | Art, a photo, a sign |
 | **Display a copy** | Mirrors another tag | Two tags showing the same thing |
