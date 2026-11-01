@@ -2,6 +2,12 @@
 
 Ten minutes from the box to live weather on every tag. Then a Deep Thought.
 
+> **Got an AI assistant?** If you use Claude Code or something like it, open
+> this repo in it and ask it to walk you through these steps. It's
+> particularly good at step 3, finding the AP on your network, and at setting
+> up the tags: everything the AP's web page does is plain HTTP, and
+> [AGENTS.md](../AGENTS.md) tells it how. Working alone is fine too.
+
 ## 1. Power the AP
 
 Plug the included cable into the socket on the end of the small box and the

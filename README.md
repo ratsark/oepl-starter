@@ -27,6 +27,10 @@ open, hackable, and meant to be broken and fixed again.
 
 ## Start here
 
+If you have an AI assistant such as Claude Code, open this repo in it and let
+it work through the steps with you; it reads [AGENTS.md](AGENTS.md) and knows
+how to talk to the AP.
+
 1. **[First steps](docs/first-steps.md)**: plug the AP in, put it on your
    Wi-Fi, and have live weather on every tag in about ten minutes, then a Deep
    Thought on one of them.
