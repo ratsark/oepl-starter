@@ -28,9 +28,8 @@ twenty seconds after power-on.)
    - **Alias**: a short name, letters and digits only, like `oepl`. This
      becomes the AP's name on your home network, which is how you'll find it
      in a moment.
-   - **Timezone**: the AP ships thinking it's in Central Europe. For US Pacific
-     enter `PST8PDT,M3.2.0,M11.1.0`; other zones are listed
-     [here](https://github.com/nayarsystems/posix_tz_db/blob/master/zones.csv).
+   - **Timezone**: pick yours from the list. The AP ships thinking it's in
+     Central Europe.
 
    Save.
 3. Now open **http://192.168.4.1/setup**. Pick your home network and type its
@@ -129,6 +128,6 @@ Interval **5** again. A new thought arrives every four hours.
 - **A tag never updates**: its card shows when it last checked in. Tags check
   in about once a minute. If one has gone quiet, take its batteries out for
   ten seconds and put them back; it searches for the AP again.
-- **Times on the tags are wrong**: the timezone. On the AP's page, **Settings**; see step 2 for the value.
+- **Times on the tags are wrong**: the timezone. On the AP's page, **Settings**, pick yours from the list.
 - **The AP's page won't load**: it may have moved address. Step 3 again, then
   reserve its address in your router so it stops happening.
