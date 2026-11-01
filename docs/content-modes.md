@@ -2,12 +2,13 @@
 
 Every tag has a **Content** setting on the AP's web page. Most modes are drawn
 by the AP itself and refreshed on a schedule. Nothing else needs to be
-running in your house.
+running in your house. (The [ready-made pictures](hosted-views.md) are the
+exception that proves the rule: drawn elsewhere, fetched by the AP.)
 
 | Mode | What it shows | Good for |
 |---|---|---|
-| **Current weather** | Temperature and conditions now | Small tags |
-| **Weather forecast** | Several days ahead | The big tag |
+| **Current weather** | Temperature and conditions now | A 1.6" tag |
+| **Weather forecast** | Several days ahead | A 2.9" tag only: the layout doesn't fit the 6" or 1.6". For the East Bay, the [ready-made pictures](hosted-views.md) look better at every size |
 | **Current date** | Today's date | Any tag |
 | **Count days / Count hours** | A countdown or count-up, turning red past a threshold you set | "Days until vacation", "days since the cat was fed" |
 | **RSS feed** | Latest headlines from any feed URL | News, blogs, GitHub releases |

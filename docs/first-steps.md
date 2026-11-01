@@ -1,81 +1,102 @@
 # First steps
 
-Goal: the AP on your Wi-Fi and live weather on your biggest tag, in about ten
-minutes.
+Ten minutes from the box to live weather on every tag. Then a Deep Thought.
 
 ## 1. Power the AP
 
 Plug the USB-C cable into the port on the end of the case, then into any USB
-power brick. The tags already have batteries in them and know how to find
-this AP; they'll check in by themselves once it's running.
+power brick. The tags already have batteries in and already know this AP;
+they'll start checking in by themselves once it's running.
 
 ## 2. Put it on your Wi-Fi
 
-The first time it boots, the AP has no Wi-Fi details, so it creates its own
-open network instead.
+Fresh out of the box the AP has no Wi-Fi details, so it makes its own open
+network.
 
 1. On your phone or laptop, join the Wi-Fi network **`OpenEPaperLink`**.
 2. Open **http://192.168.4.1/setup** in a browser.
-3. Pick your home network and enter its password. The AP only speaks
-   **2.4 GHz** Wi-Fi. If your router splits 2.4 and 5 GHz into separate names,
-   pick the 2.4 GHz one. Check the spelling; a typo leaves the AP stuck in
-   setup mode, and you can just start again from step 1.
+3. Pick your home network and type its password. The AP speaks **2.4 GHz**
+   Wi-Fi only; if your router shows separate 2.4 and 5 GHz names, pick the
+   2.4 one. Check the spelling: a typo leaves the AP stuck in setup mode, and
+   the fix is just to start again from step 1.
 4. The AP reboots and joins your network. Rejoin your normal Wi-Fi.
 
-## 3. Find the AP on your network
+## 3. Find the AP
 
-The AP gets a new address from your router. To find it:
+Your router gave the AP an address. Three ways to find it, try them in order:
 
-- **Try `http://openepaperlink/`** first. Kits come with the AP named
-  `OpenEPaperLink`, and many home routers let you reach a device by its name
-  (some want `http://openepaperlink.lan/` or `.home`). Plain
-  `openepaperlink.local` does **not** work; the AP doesn't announce itself
-  that way.
-- **Router's device list**: look in your router's app or admin page for a
-  device named `OpenEPaperLink` (or `OpenEpaperLink-XXXX` on an AP that
-  wasn't renamed).
-- **Network scanner**: an app like Fing (phone) or `nmap -sn 192.168.1.0/24`
-  (laptop, adjust to your network) will list it.
+- **`http://openepaperlink/`** in a browser. Most home routers let you reach a
+  device by its name (some want `http://openepaperlink.lan/` or `.home`).
+- **Your router's device list**, in its app or admin page: look for
+  `OpenEPaperLink`.
+- **A network scanner**, like Fing on a phone or `nmap -sn 192.168.1.0/24` on
+  a laptop (adjust to your network).
 
-Open `http://<that address>/` and you should see the AP's page, with a card for
-each tag.
+Open `http://<that address>/`. You should see the AP's page with a card for
+each tag, and each card's "last seen" time ticking along. **Bookmark it.**
+Routers usually keep giving a device the same address, and you can reserve
+one in the router's settings so it never moves.
 
-**Bookmark it.** Most routers keep giving the same device the same address.
-You can also reserve one for it in your router's settings so it never moves.
+## 4. Weather on every tag
 
-## 4. Set the timezone
+Start with the weather on *all* the tags. It's the quickest way to see what
+each size can do, and it takes a minute per tag.
 
-On the AP's page, open **Settings** and set the timezone. The default is
-Central European time, so clocks and forecasts will be off until you change it.
-For US Pacific time, use `PST8PDT,M3.2.0,M11.1.0`. Other zones:
-[POSIX TZ strings](https://github.com/nayarsystems/posix_tz_db/blob/master/zones.csv).
+For each tag:
 
-## 5. Weather on the big tag
+1. Click its card. The card tells you the tag's size.
+2. Set **Content** to **Image URL**.
+3. Paste the address for that size:
 
-1. On the AP's page, click the card for your largest tag.
-2. Set **Content** to **Weather forecast** (or **Current weather**).
-3. Type a location, like `Berkeley, CA`, and pick units.
-4. Save.
+   | Tag | Berkeley | Oakland |
+   |---|---|---|
+   | 6" (600 x 448, the big one) | `https://oepl.ratsark.com/weather-berkeley-6in.jpg` | `https://oepl.ratsark.com/weather-oakland-6in.jpg` |
+   | 2.9" (384 x 168, the wide one) | `https://oepl.ratsark.com/weather-berkeley-29in.jpg` | `https://oepl.ratsark.com/weather-oakland-29in.jpg` |
+   | 1.6" (200 x 200, the small square) | `https://oepl.ratsark.com/weather-berkeley-16in.jpg` | `https://oepl.ratsark.com/weather-oakland-16in.jpg` |
 
-The AP looks up the forecast, draws it, and queues it for the tag. The tag
-picks it up the next time it checks in, usually within a minute, and the
-screen flashes while it redraws (that's normal for e-paper). From then on
-it updates by itself.
+4. Set **Interval** to **5**.
+5. Save.
+
+Within a minute or two each tag flashes a few times (that's e-paper redrawing)
+and settles on the forecast. The pictures are redrawn hourly on a server and
+your AP fetches them; nothing else runs in your house. The full list, including
+how they're made, is in [ready-made pictures](hosted-views.md).
+
+**Not in the East Bay?** The AP can draw its own forecast for any town: set
+**Content** to **Weather forecast**, type the town, pick units. Do this on a
+**2.9" tag**; the built-in layout is designed for that size and doesn't fit the
+6" or the 1.6". For the big tag, see [going further](going-further.md) for
+drawing your own, or just enjoy the Berkeley weather.
+
+## 5. A Deep Thought
+
+Now that you've seen the sizes, give one tag something to think about. Click a
+6" or 2.9" card, keep **Image URL**, and swap the address for:
+
+| Tag | URL |
+|---|---|
+| 6" | `https://oepl.ratsark.com/deepthought-6in.jpg` |
+| 2.9" | `https://oepl.ratsark.com/deepthought-29in.jpg` |
+
+Interval **5** again. A new thought arrives every four hours.
 
 ## Now what?
 
-- Want it prettier? There are [ready-made pictures](hosted-views.md) of the
-  Berkeley and Oakland weather, and a Deep Thought, sized for each tag. Paste
-  a URL into the tag's **Image URL** mode and it takes care of itself.
-- Try the other [content modes](content-modes.md) on the other tags.
 - Give each tag a name: click its card and fill in **Alias**.
-- Ready to draw your own stuff? See [going further](going-further.md).
+- See what else the AP can draw on its own: [content modes](content-modes.md).
+  Countdowns and QR codes are good fun on the small tags.
+- Draw your own pictures: [going further](going-further.md).
 
 ## If something's off
 
-- **No `OpenEPaperLink` network appears**: the AP may already have Wi-Fi details
+- **No `OpenEPaperLink` network appears**: the AP already has Wi-Fi details
   saved. Look for it on your router instead (step 3).
-- **A tag never updates**: the tag card shows when it last checked in. Tags
-  check in about once a minute. If one hasn't for a while, take its batteries
-  out for ten seconds and put them back; it'll search for the AP again.
-- **Weather shows the wrong times**: the timezone (step 4).
+- **A tag never updates**: its card shows when it last checked in. Tags check
+  in about once a minute. If one has gone quiet, take its batteries out for
+  ten seconds and put them back; it searches for the AP again.
+- **Times on the tags are wrong**: on the AP's page open **Settings** and check
+  the timezone. For US Pacific it should read `PST8PDT,M3.2.0,M11.1.0`; other
+  zones are listed
+  [here](https://github.com/nayarsystems/posix_tz_db/blob/master/zones.csv).
+- **The AP's page won't load**: it may have moved address. Step 3 again, then
+  reserve its address in your router so it stops happening.

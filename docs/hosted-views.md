@@ -2,17 +2,20 @@
 
 The fastest way to get something good-looking on a tag is to point it at a
 picture that someone else keeps up to date. These are hosted at
-`oepl.ratsark.com`, redrawn on a schedule, and sized for the tags in the kit.
-Your AP downloads them itself; nothing runs in your house.
+`oepl.ratsark.com`, redrawn on a schedule, and drawn separately for each tag
+size in the kit. Your AP downloads them itself; nothing runs in your house.
+
+If you've just unboxed the kit, [first steps](first-steps.md) walks you through
+putting these on the tags. This page is the reference.
 
 ## Set one up
 
-1. On the AP's page, click the tag's card.
+1. On the AP's page, click the tag's card. It tells you the tag's size.
 2. Set **Content** to **Image URL**.
-3. Paste the URL for your tag's size from the table below.
-4. Set **Interval** to **5**. The AP checks the picture every 5 minutes and
-   only sends it to the tag when it has changed, so the tag's battery doesn't
-   care how often the AP looks.
+3. Paste the URL for that size from the table below.
+4. Set **Interval** to **5**. The AP checks every 5 minutes and only sends the
+   picture to the tag when it has changed, so the tag's battery doesn't care
+   how often the AP looks.
 5. Save. The tag redraws at its next check-in, usually within a minute.
 
 ## The pictures
@@ -33,8 +36,9 @@ Which tag is which: the 6" is the big one with a red and black display; the
 pictures use yellow as well as red, because those panels can show it.
 
 The weather is for the East Bay. If you live somewhere else, the AP's own
-**Weather forecast** mode works for any town (see [first steps](first-steps.md),
-step 5); it just isn't as pretty.
+**Weather forecast** mode works for any town; use it on a **2.9" tag**, the
+only size its layout fits, and see [going further](going-further.md) for
+drawing your own town at the other sizes.
 
 ## What's in the weather pictures
 

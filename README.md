@@ -1,7 +1,8 @@
 # oepl-starter
 
 So someone handed you a little box with a circuit board in it and a few
-e-paper price tags. This repo is where you start.
+e-paper price tags, and a QR code brought you here. Good. This is where you
+start.
 
 The tags are electronic shelf labels, the kind supermarkets use for prices.
 They've been reflashed with open firmware from the
@@ -18,14 +19,15 @@ open, hackable, and meant to be broken and fixed again.
 
 ## Start here
 
-1. **[First steps](docs/first-steps.md)**: plug the AP in, put it on your Wi-Fi,
-   and get live weather on a tag in about ten minutes.
-2. **[Ready-made pictures](docs/hosted-views.md)**: East Bay weather and a daily
-   Deep Thought, drawn for each tag size and kept up to date for you. Paste a
-   URL and you're done.
-3. **[What the AP can show by itself](docs/content-modes.md)**: weather, calendar,
-   RSS, countdowns, QR codes and more, with no other computer involved.
-4. **[Going further](docs/going-further.md)**: draw your own content, from a
+1. **[First steps](docs/first-steps.md)**: plug the AP in, put it on your
+   Wi-Fi, and have live weather on every tag in about ten minutes, then a Deep
+   Thought on one of them.
+2. **[Ready-made pictures](docs/hosted-views.md)**: the full list of what's
+   kept up to date for you, East Bay weather in three sizes and a Deep Thought
+   in two.
+3. **[What the AP can show by itself](docs/content-modes.md)**: countdowns, QR
+   codes, calendars, RSS and more, with no other computer involved.
+4. **[Going further](docs/going-further.md)**: draw your own pictures, from a
    cloud script, a Raspberry Pi, or Home Assistant.
 
 ## Make more of them
