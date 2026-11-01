@@ -6,13 +6,16 @@ Ten minutes from the box to live weather on every tag. Then a Deep Thought.
 
 Plug the included cable into the socket on the end of the small box and the
 included plug into the wall. That's the AP. If any tags came with their
-batteries out, put them in now; the tags already know this AP and start
-checking in by themselves once it's running.
+batteries out, put them in now. The tags find the AP on their own: each one
+wakes up, listens for an AP, and attaches itself to the first one that
+answers. Nothing to pair.
 
 ## 2. Put it on your Wi-Fi
 
 Fresh out of the box the AP has no Wi-Fi details, so it makes its own open
-network.
+network. (It also does this whenever it can't reach the Wi-Fi it knows, so
+an AP that was tested on someone else's network will offer it too, about
+twenty seconds after power-on.)
 
 1. On your phone or laptop, join the Wi-Fi network **`OpenEPaperLink`**.
 2. Open **http://192.168.4.1/setup** in a browser.
@@ -102,8 +105,14 @@ Interval **5** again. A new thought arrives every four hours.
 
 ## If something's off
 
-- **No `OpenEPaperLink` network appears**: the AP already has Wi-Fi details
-  saved. Look for it on your router instead (step 3).
+- **No `OpenEPaperLink` network appears**: give it thirty seconds after
+  power-on first. If it still isn't there, the AP has joined a Wi-Fi it already
+  knew, perhaps yours: look for it on your router (step 3). If it has joined
+  the wrong one, or you want a clean start, wipe its Wi-Fi settings: slide the
+  lid off the box, find the two tiny buttons on the larger board next to its
+  USB sockets, and with the AP powered up **hold the one marked BOOT for six
+  seconds** (don't press RST). The AP forgets its Wi-Fi and the `OpenEPaperLink`
+  network appears. Then step 2.
 - **A tag never updates**: its card shows when it last checked in. Tags check
   in about once a minute. If one has gone quiet, take its batteries out for
   ten seconds and put them back; it searches for the AP again.
