@@ -30,12 +30,14 @@ open, hackable, and meant to be broken and fixed again.
 4. **[Going further](docs/going-further.md)**: draw your own pictures, from a
    cloud script, a Raspberry Pi, or Home Assistant.
 
-## Make more of them
+## How they're made
 
-- **[Build an AP](docs/build-an-ap.md)**: the parts, the eight wires, and how to
-  flash both boards.
-- **[The case](case/)**: a printable enclosure for that AP, with a sliding lid
-  and no screws.
+Curious what's in the box, or want another one someday? Everything is here.
+
+- **[The AP](docs/build-an-ap.md)**: the two boards, the eight wires between
+  them, and how the firmware got on.
+- **[The case](case/)**: the printable enclosure it lives in, with a sliding
+  lid and no screws.
 
 ## For AI agents
 
