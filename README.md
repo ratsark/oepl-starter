@@ -27,7 +27,7 @@ open, hackable, and meant to be broken and fixed again.
 
 ## Start here
 
-If you have an AI assistant such as Claude Code, open this repo in it and let
+If you have an AI assistant such as Claude Code, point it at this repo and let
 it work through the steps with you; it reads [AGENTS.md](AGENTS.md) and knows
 how to talk to the AP.
 
