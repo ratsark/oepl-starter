@@ -23,7 +23,7 @@ open, hackable, and meant to be broken and fixed again.
   two small square 1.6" ones (those four also do yellow).
 - **The AP**: the small printed box, with a USB plug and cable to power it.
 - **Stands**: a few for a table, a few magnetic ones for the fridge.
-- **Batteries** for the tags.
+- **Spare batteries** for the tags (they come with batteries in).
 
 ## Start here
 

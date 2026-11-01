@@ -5,9 +5,9 @@ Ten minutes from the box to live weather on every tag. Then a Deep Thought.
 ## 1. Power the AP
 
 Plug the included cable into the socket on the end of the small box and the
-included plug into the wall. That's the AP. If any tags came with their
-batteries out, put them in now. The tags find the AP on their own: each one
-wakes up, listens for an AP, and attaches itself to the first one that
+included plug into the wall. That's the AP. The tags already have batteries
+in (the loose ones in the box are spares) and find the AP on their own: each
+one wakes up, listens for an AP, and attaches itself to the first one that
 answers. Nothing to pair.
 
 ## 2. Put it on your Wi-Fi
