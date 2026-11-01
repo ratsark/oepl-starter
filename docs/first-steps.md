@@ -59,7 +59,6 @@ device the same address, and you can reserve one in the router's settings so
 it never moves.
 
 ## 4. Weather on every tag
-## 5. Weather on every tag
 
 Start with the weather on *all* the tags. It's the quickest way to see what
 each size can do, and it takes a minute per tag.
