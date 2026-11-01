@@ -11,8 +11,11 @@ Everything the web page does is plain HTTP on the AP, with **no authentication**
 Keep it on the home network; never expose it to the internet. Note that
 `GET /get_wifi_config` returns the saved Wi-Fi password in plain text: don't
 print or log its output. `<ap>` below is
-its IP address, or its DHCP hostname: `OpenEpaperLink-XXXX` by default, or the
-AP's alias once one is set in AP settings. mDNS/`.local` isn't supported.
+its IP address, or its DHCP hostname: `OpenEpaperLink-XXXX` by default (XXXX =
+last two bytes of the Wi-Fi MAC), or the AP's alias once one is set in AP
+settings (letters, digits and hyphens survive; set it on the setup network at
+`http://192.168.4.1/` before joining Wi-Fi and the router learns it on the first
+lease). mDNS/`.local` isn't supported.
 
 | Request | What it does |
 |---|---|

@@ -10,7 +10,7 @@ in (the loose ones in the box are spares) and find the AP on their own: each
 one wakes up, listens for an AP, and attaches itself to the first one that
 answers. Nothing to pair.
 
-## 2. Put it on your Wi-Fi
+## 2. Name it, then put it on your Wi-Fi
 
 Fresh out of the box the AP has no Wi-Fi details, so it makes its own open
 network. (It also does this whenever it can't reach the Wi-Fi it knows, so
@@ -18,39 +18,47 @@ an AP that was tested on someone else's network will offer it too, about
 twenty seconds after power-on.)
 
 1. On your phone or laptop, join the Wi-Fi network **`OpenEPaperLink`**.
-2. Open **http://192.168.4.1/setup** in a browser.
-3. Pick your home network and type its password. The AP speaks **2.4 GHz**
-   Wi-Fi only; if your router shows separate 2.4 and 5 GHz names, pick the
-   2.4 one. Check the spelling: a typo leaves the AP stuck in setup mode, and
-   the fix is just to start again from step 1.
-4. The AP reboots and joins your network. Rejoin your normal Wi-Fi.
+2. Open **http://192.168.4.1/** and click **Settings**. Two things to set:
+   - **Alias**: a short name, letters and digits only, like `oepl`. This
+     becomes the AP's name on your home network, which is how you'll find it
+     in a moment.
+   - **Timezone**: the AP ships thinking it's in Central Europe. For US Pacific
+     enter `PST8PDT,M3.2.0,M11.1.0`; other zones are listed
+     [here](https://github.com/nayarsystems/posix_tz_db/blob/master/zones.csv).
 
-## 3. Find the AP
+   Save.
+3. Now open **http://192.168.4.1/setup**. Pick your home network and type its
+   password. The AP speaks **2.4 GHz** Wi-Fi only; if your router shows
+   separate 2.4 and 5 GHz names, pick the 2.4 one. Check the spelling: a typo
+   leaves the AP stuck in setup mode, and the fix is just to start again from
+   step 1. Leave the static IP fields empty unless you know your network and
+   want a fixed address.
+4. Save. The AP reboots and joins your network. Rejoin your normal Wi-Fi.
 
-Your router gave the AP an address. Three ways to find it, try them in order:
+Skipped the alias? The setup page shows the AP's Wi-Fi MAC address at the
+top; its name is then `OpenEpaperLink-` plus the last four characters, so
+`...:FC:D8` gives `OpenEpaperLink-FCD8`.
 
-- **Your router's device list**, in its app or admin page: look for a device
-  called `OpenEpaperLink-XXXX` (the last four characters are unique to your AP).
-- **That name in a browser**: `http://openepaperlink-xxxx/`, with your four
-  characters. Most home routers let you reach a device by its name; some want
-  `.lan` or `.home` on the end.
-- **A network scanner**, like Fing on a phone or `nmap -sn 192.168.1.0/24` on
-  a laptop (adjust to your network).
+## 3. Open the AP's page
 
-Open `http://<that address>/`. You should see the AP's page with a card for
-each tag, and each card's "last seen" time ticking along. **Bookmark it.**
-Routers usually keep giving a device the same address, and you can reserve
-one in the router's settings so it never moves.
+In a browser, go to **`http://oepl/`** (or whatever alias you chose). Most
+home routers let you reach a device by its name as soon as it has joined.
 
-## 4. Set the timezone
+If that doesn't load:
 
-Thirty seconds, and it saves confusion later: on the AP's page open
-**Settings** and set the timezone. The AP ships thinking it's in Central
-Europe. For US Pacific, enter `PST8PDT,M3.2.0,M11.1.0`; other zones are listed
-[here](https://github.com/nayarsystems/posix_tz_db/blob/master/zones.csv).
-While you're there, give the AP a name under **Alias** if you like; it becomes
-the name your router shows for it.
+- Try the name with your router's suffix: `http://oepl.lan/`, `.home`, or
+  `.localdomain` are the common ones.
+- Look in your router's app or admin page for a device called `oepl`; it will
+  show the address. Use `http://<that address>/`.
+- Last resort, a network scanner like Fing on a phone lists everything on the
+  network.
 
+You should see the AP's page with a card for each tag, and each card's "last
+seen" time ticking along. **Bookmark it.** Routers usually keep giving a
+device the same address, and you can reserve one in the router's settings so
+it never moves.
+
+## 4. Weather on every tag
 ## 5. Weather on every tag
 
 Start with the weather on *all* the tags. It's the quickest way to see what
@@ -82,7 +90,7 @@ how they're made, is in [live displays, ready to use](hosted-views.md).
 6" or the 1.6". For the big tag, see [going further](going-further.md) for
 drawing your own, or just enjoy the Berkeley weather.
 
-## 6. A Deep Thought
+## 5. A Deep Thought
 
 Now that you've seen the sizes, give one tag something to think about. Click a
 6" or 2.9" card, keep **Image URL**, and swap the address for:
@@ -116,6 +124,6 @@ Interval **5** again. A new thought arrives every four hours.
 - **A tag never updates**: its card shows when it last checked in. Tags check
   in about once a minute. If one has gone quiet, take its batteries out for
   ten seconds and put them back; it searches for the AP again.
-- **Times on the tags are wrong**: the timezone (step 4).
+- **Times on the tags are wrong**: the timezone. On the AP's page, **Settings**; see step 2 for the value.
 - **The AP's page won't load**: it may have moved address. Step 3 again, then
   reserve its address in your router so it stops happening.
