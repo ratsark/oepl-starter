@@ -5,6 +5,27 @@ ESP32-S3 + ESP32-C6 access point and a few e-paper tags. The person is likely
 a curious tinkerer, not an expert. Start from [docs/first-steps.md](docs/first-steps.md)
 if they haven't got the AP on their Wi-Fi yet.
 
+## Finding the AP on the network
+
+The guide tells people you're good at this, so be. The AP answers `GET /sysinfo`
+with JSON containing `"env"` and `"ap_version"`; nothing else on a home network
+does. Work out the person's subnet from their own address (`ipconfig getifaddr
+en0` on a Mac, `ip -4 addr` on Linux, `ipconfig` on Windows), then try the
+hostname first and sweep only if needed:
+
+```sh
+curl -s -m 2 http://openepaperlink-xxxx/sysinfo        # default name, XXXX from the setup page's MAC
+curl -s -m 2 http://<alias>/sysinfo                      # if they set an alias; also try .lan .home .localdomain
+nmap -sn 192.168.1.0/24                                  # list live hosts, then
+for ip in $(nmap -sn 192.168.1.0/24 -oG - | awk '/Up/{print $2}'); do
+  curl -s -m 1 http://$ip/sysinfo | grep -q ap_version && echo "AP at $ip"; done
+```
+
+Without nmap, `arp -a` after a ping sweep lists hosts too; the AP's Wi-Fi MAC
+starts with an Espressif prefix (often `1C:DB:D4`, `7C:E8:B1`, `84:FC:E6`,
+`24:EC:4A`, `30:30:F9`, `98:3D:AE`, `80:65:99`). Once found, suggest they
+bookmark it and reserve the address in the router.
+
 ## The AP's HTTP API
 
 Everything the web page does is plain HTTP on the AP, with **no authentication**.
