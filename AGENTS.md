@@ -11,9 +11,8 @@ Everything the web page does is plain HTTP on the AP, with **no authentication**
 Keep it on the home network; never expose it to the internet. Note that
 `GET /get_wifi_config` returns the saved Wi-Fi password in plain text: don't
 print or log its output. `<ap>` below is
-its IP address, or its DHCP hostname: `OpenEpaperLink-XXXX`, or the AP's alias
-(kits are named `OpenEPaperLink`) if one is set in AP settings. mDNS/`.local` isn't
-supported.
+its IP address, or its DHCP hostname: `OpenEpaperLink-XXXX` by default, or the
+AP's alias once one is set in AP settings. mDNS/`.local` isn't supported.
 
 | Request | What it does |
 |---|---|
@@ -61,7 +60,7 @@ forecast** mode only fits a 2.9" tag; don't suggest it for the 6" or 1.6".
 - **Don't change a tag's content mode casually.** Uploading an image switches
   the tag to an image mode; a scheduled mode the person set up (weather etc.)
   gets replaced.
-- **Timezone defaults to Central European.** If clocks are off, set it.
+- **Timezone defaults to Central European.** Kits ship that way; if clocks are off, set it (`POST /save_apcfg` with `timezone`).
 - **Tags stick to the AP they first found** and only rescan after losing it
   (or a battery pull).
 - Before reflashing anything, read [docs/build-an-ap.md](docs/build-an-ap.md)

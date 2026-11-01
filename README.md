@@ -17,6 +17,14 @@ why the batteries last for years.
 This isn't a finished gadget. It's an invitation to tinker: everything here is
 open, hackable, and meant to be broken and fixed again.
 
+## What's in the box
+
+- **Six tags**: two big 6" ones (black, white and red), two wide 2.9" ones and
+  two small square 1.6" ones (those four also do yellow).
+- **The AP**: the small printed box, with a USB plug and cable to power it.
+- **Stands**: a few for a table, a few magnetic ones for the fridge.
+- **Batteries** for the tags.
+
 ## Start here
 
 1. **[First steps](docs/first-steps.md)**: plug the AP in, put it on your

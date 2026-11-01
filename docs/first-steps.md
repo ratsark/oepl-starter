@@ -4,9 +4,10 @@ Ten minutes from the box to live weather on every tag. Then a Deep Thought.
 
 ## 1. Power the AP
 
-Plug the USB-C cable into the port on the end of the case, then into any USB
-power brick. The tags already have batteries in and already know this AP;
-they'll start checking in by themselves once it's running.
+Plug the included cable into the socket on the end of the small box and the
+included plug into the wall. That's the AP. If any tags came with their
+batteries out, put them in now; the tags already know this AP and start
+checking in by themselves once it's running.
 
 ## 2. Put it on your Wi-Fi
 
@@ -25,10 +26,11 @@ network.
 
 Your router gave the AP an address. Three ways to find it, try them in order:
 
-- **`http://openepaperlink/`** in a browser. Most home routers let you reach a
-  device by its name (some want `http://openepaperlink.lan/` or `.home`).
-- **Your router's device list**, in its app or admin page: look for
-  `OpenEPaperLink`.
+- **Your router's device list**, in its app or admin page: look for a device
+  called `OpenEpaperLink-XXXX` (the last four characters are unique to your AP).
+- **That name in a browser**: `http://openepaperlink-xxxx/`, with your four
+  characters. Most home routers let you reach a device by its name; some want
+  `.lan` or `.home` on the end.
 - **A network scanner**, like Fing on a phone or `nmap -sn 192.168.1.0/24` on
   a laptop (adjust to your network).
 
@@ -37,7 +39,16 @@ each tag, and each card's "last seen" time ticking along. **Bookmark it.**
 Routers usually keep giving a device the same address, and you can reserve
 one in the router's settings so it never moves.
 
-## 4. Weather on every tag
+## 4. Set the timezone
+
+Thirty seconds, and it saves confusion later: on the AP's page open
+**Settings** and set the timezone. The AP ships thinking it's in Central
+Europe. For US Pacific, enter `PST8PDT,M3.2.0,M11.1.0`; other zones are listed
+[here](https://github.com/nayarsystems/posix_tz_db/blob/master/zones.csv).
+While you're there, give the AP a name under **Alias** if you like; it becomes
+the name your router shows for it.
+
+## 5. Weather on every tag
 
 Start with the weather on *all* the tags. It's the quickest way to see what
 each size can do, and it takes a minute per tag.
@@ -68,7 +79,7 @@ how they're made, is in [live displays, ready to use](hosted-views.md).
 6" or the 1.6". For the big tag, see [going further](going-further.md) for
 drawing your own, or just enjoy the Berkeley weather.
 
-## 5. A Deep Thought
+## 6. A Deep Thought
 
 Now that you've seen the sizes, give one tag something to think about. Click a
 6" or 2.9" card, keep **Image URL**, and swap the address for:
@@ -82,6 +93,8 @@ Interval **5** again. A new thought arrives every four hours.
 
 ## Now what?
 
+- Put the tags where you'll see them. The kit has table stands and magnetic
+  stands for the fridge.
 - Give each tag a name: click its card and fill in **Alias**.
 - See what else the AP can draw on its own: [content modes](content-modes.md).
   Countdowns and QR codes are good fun on the small tags.
@@ -94,9 +107,6 @@ Interval **5** again. A new thought arrives every four hours.
 - **A tag never updates**: its card shows when it last checked in. Tags check
   in about once a minute. If one has gone quiet, take its batteries out for
   ten seconds and put them back; it searches for the AP again.
-- **Times on the tags are wrong**: on the AP's page open **Settings** and check
-  the timezone. For US Pacific it should read `PST8PDT,M3.2.0,M11.1.0`; other
-  zones are listed
-  [here](https://github.com/nayarsystems/posix_tz_db/blob/master/zones.csv).
+- **Times on the tags are wrong**: the timezone (step 4).
 - **The AP's page won't load**: it may have moved address. Step 3 again, then
   reserve its address in your router so it stops happening.
