@@ -1,16 +1,16 @@
 # oepl-starter
 
-So someone handed you a little box with a circuit board in it and a few
-e-paper price tags, and a QR code brought you here. Good. This is where you
-start.
+So someone handed you a small plastic box with a USB-C socket on one end, a
+handful of e-paper price tags, and a QR code that brought you here. Good. This
+is where you start.
 
 The tags are electronic shelf labels, the kind supermarkets use for prices.
 They've been reflashed with open firmware from the
 [OpenEPaperLink](https://github.com/OpenEPaperLink/OpenEPaperLink) project (OEPL),
 so they now take orders from **your** access point instead of a store's. The
-access point (the "AP", the box with two boards and a nest of wires) joins your
-Wi-Fi, decides what each tag should show, and beams the pictures to the tags
-over a low-power radio. A tag sleeps almost all the time, wakes up about once a
+access point (the "AP") is the plastic box: two small circuit boards and a nest
+of wires inside. It joins your Wi-Fi, decides what each tag should show, and
+beams the pictures to the tags over a low-power radio. A tag sleeps almost all the time, wakes up about once a
 minute to ask the AP "anything for me?", and only redraws when there is. That is
 why the batteries last for years.
 
