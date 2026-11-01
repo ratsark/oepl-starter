@@ -18,7 +18,7 @@ exception that proves the rule: drawn elsewhere, fetched by the AP.)
 | **Json template** | Downloads a list of drawing commands from a web address | Your own layouts, see [going further](going-further.md) |
 | **Static image** | A picture you upload once | Art, a photo, a sign |
 | **Display a copy** | Mirrors another tag | Two tags showing the same thing |
-| **Access point info** | The AP's own IP address and status | Finding the AP when you've lost it |
+| **Access point info** | The AP's own IP address and status | A 1.6" tag, if you keep losing the AP's address. Otherwise a waste of a tag |
 
 Modes that aren't really "content": **Set NFC URL** (what a phone sees when it
 taps an NFC-equipped tag), **Firmware update**, **Send command**, **Set tag
